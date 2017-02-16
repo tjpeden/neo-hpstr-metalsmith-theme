@@ -1,0 +1,24 @@
+::selection {
+  color: $base-color;
+  background-color: lighten($base-color, 65%);
+  text-shadow: none;
+}
+
+table {
+  width: 100%;
+}
+
+.image-left {
+  float: none;
+
+  @media #{$medium} {
+    float: left;
+  }
+}
+.image-right {
+  float: none;
+
+  @media #{$medium} {
+    float: right;
+  }
+}

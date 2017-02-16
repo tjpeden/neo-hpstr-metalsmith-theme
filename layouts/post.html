@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+  <body id="post" {{#if feature}}class="feature"{{/if}}>
+    {{> header}}
+
+    <div id="main" role="main">
+      <article class="entry">
+        <div class="entry-content">
+          {{#if feature}}
+          <div class="entry-image-index">
+            <img src="{{ site.url }}/images/{{ feature.image }}" alt="{{ title }}">
+            {{#if feature.credit}}
+            <div class="image-credit">
+              Image source:
+              <a href="{{ feature.credit.url }}" target="_blank">
+                {{ feature.credit.name }}
+              </a>
+            </div>
+            {{/if}}
+          </div>
+          {{/if}}
+          <h1 class="post-title entry-title">{{ title }}</h1>
+          {{{ contents }}}
+          <footer class="entry-meta">
+            <!-- TODO: Tags -->
+            <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>
+            <!-- TODO: Social Share -->
+          </footer>
+        </div>
+        {{> author}}
+        {{#if comments}}
+        {{#if site.discus}}
+        <section id="disqus_thread"></section>
+        {{/if}}
+        {{/if}}
+      </article>
+    </div>
+
+    {{> scripts}}
+
+    {{> footer}}
+  </body>
+</html>

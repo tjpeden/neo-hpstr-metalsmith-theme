@@ -1,0 +1,26 @@
+---
+layout: home.html
+title: All Posts
+permalink: false
+comments: false
+---
+{{#each posts}}
+{{#if @first}}
+<section>
+  <h2 id="{{ format date 'YYYY' }}-ref">{{ format date 'YYYY' }}</h2>
+  <ul>
+{{/if}}
+    <li class="entry-title">
+      <a href="{{ site.url }}/{{ path }}" title="{{ title }}">{{ title }}</a>
+    </li>
+{{#if @last}}
+  </ul>
+</section>
+{{else if-next-year date next.date}}
+  </ul>
+</section>
+<section>
+  <h2 class="year-heading" id="{{ format next.date 'YYYY' }}-ref">{{ format next.date 'YYYY' }}</h2>
+  <ul>
+{{/if}}
+{{/each}}
