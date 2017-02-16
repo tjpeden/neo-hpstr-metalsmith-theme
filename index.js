@@ -103,6 +103,11 @@ Metalsmith(__dirname)
 .source('./content')
 .destination('./public')
 // .clean(true)
+// Use the following for debugging purposes
+// .use((files, metalsmith, done) => {
+//   setImmediate(done);
+//   console.dir(files);
+// })
 .use(drafts())
 .use(
   markdownRemarkable('full', {
@@ -142,10 +147,6 @@ Metalsmith(__dirname)
 
   done();
 })
-// .use((files, metalsmith, done) => {
-//   setImmediate(done);
-//   console.dir(files);
-// })
 .use(discoverHelpers())
 .use(discoverPartials())
 .use(inPlace({
