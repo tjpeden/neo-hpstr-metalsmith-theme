@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>Syntax Highlighting Post &#8211; Blog Title</title>
+    <meta name="description" content="Demo post displaying the various ways of highlighting code in Markdown.">
+    <meta name="keywords" content="sample post, code, highlighting">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tjpeden">
+    <meta name="twitter:creator" content="@tjpeden">
+    
+    <!-- Open Graph -->
+    <meta name="og:locale" content="en_US">
+    <meta name="og:type" content="article">
+    <meta name="og:title" content="Syntax Highlighting Post">
+    <meta name="og:description" content="Demo post displaying the various ways of highlighting code in Markdown.">
+    <meta name="og:url" content="http://localhost:8080/2016/12/01/syntax-highlighting-post">
+    <meta name="og:site_name" content="Blog Title">
+    <meta name="og:image" content="http://localhost:8080/images/">
+    
+    <!-- TODO: Canonical URL -->
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="http://localhost:8080/stylesheets/vendor/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="http://localhost:8080/stylesheets/vendor/prism-duotone-space.css">
+    <link rel="stylesheet" href="http://localhost:8080/stylesheets/main.css">
+    <!-- Webfonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    
+    <link rel="shortcut icon" href="http://localhost:8080/favicon.ico">
+    <link rel="shortcut icon" href="http://localhost:8080/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="http://localhost:8080/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:8080/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:8080/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:8080/images/apple-touch-icon-144x144-precomposed.png">
+    
+  </head>
+  <body id="post" >
+    <div class="header-menu header-menu-top">
+      <ul class="header-item-container">
+        <li class="header-item-title header-toggle">
+          <a href="#menu"><h2><i class="fa fa-bars"></i></h2></a>
+        </li>
+        <li class="header-item-title">
+          <a href="http://localhost:8080/">
+            <span class="title">Blog Title</span>
+          </a>
+        </li>
+        <li class="header-item">
+          <a href="https://github.com/tjpeden/neo-hpstr-metalsmith-theme#installation" target="_blank">
+            <h3>Install</h3>
+          </a>
+        </li>
+        <li class="header-item">
+          <a href="https://github.com/tjpeden/neo-hpstr-metalsmith-theme" target="_blank">
+            <h3>Fork</h3>
+          </a>
+        </li>
+        <li class="header-item">
+          <a href="http://localhost:8080/posts">
+            <h3>Archive</h3>
+          </a>
+        </li>
+            <li class="header-item">
+          <a href="http://localhost:8080/">
+            <h3>Home</h3>
+          </a>
+        </li>
+            <li class="header-item">
+          <a href="http://localhost:8080/search">
+            <h3><i class="fa fa-search"></i></h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="entry-header">
+      <div class="header-title">
+        <div class="header-title-wrap">
+          <h1>Syntax Highlighting Post</h1>
+          <h2>
+            <span class="entry-date date published updated">
+              <time datetime="2016-11-30T18:00:00-06:00">December 1, 2016</time>
+            </span>
+          </h2>
+          <p class="entry-reading-time">
+            <i class="fa fa-clock-o"></i>
+            Reading time ~2 minutes
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <article class="entry">
+        <div class="entry-content">
+          <h1 class="post-title entry-title">Syntax Highlighting Post</h1>
+          <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h3>Rouge Code Blocks</h3>
+<p>To modify styling and highlight colors edit <code>/_sass/_rouge.scss</code>.</p>
+<pre class="language-css line-numbers"><code class="language-css"><span class="token selector">#container</span> <span class="token punctuation">{</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 -240px 0 0<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-html line-numbers"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pagination<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>navigation<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    {% if page.previous %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ site.url }}{{ page.previous.url }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ page.previous.title }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Previous article<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    {% endif %}
+    {% if page.next %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ site.url }}{{ page.next.url }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ page.next.title }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Next article<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    {% endif %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span><span class="token comment" spellcheck="true">&lt;!-- /.pagination --&gt;</span>
+</code></pre>
+<pre class="language-ruby line-numbers"><code class="language-ruby"><span class="token keyword">module</span> <span class="token constant">Jekyll</span>
+  <span class="token keyword">class</span> <span class="token class-name">TagIndex</span> <span class="token operator">&lt;</span> <span class="token constant">Page</span>
+    <span class="token keyword">def</span> <span class="token function">initialize</span><span class="token punctuation">(</span>site<span class="token punctuation">,</span> base<span class="token punctuation">,</span> dir<span class="token punctuation">,</span> tag<span class="token punctuation">)</span>
+      <span class="token variable">@site</span> <span class="token operator">=</span> site
+      <span class="token variable">@base</span> <span class="token operator">=</span> base
+      <span class="token variable">@dir</span> <span class="token operator">=</span> dir
+      <span class="token variable">@name</span> <span class="token operator">=</span> <span class="token string">&apos;index.html&apos;</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">process</span><span class="token punctuation">(</span><span class="token variable">@name</span><span class="token punctuation">)</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">read_yaml</span><span class="token punctuation">(</span><span class="token builtin">File</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>base<span class="token punctuation">,</span> <span class="token string">&apos;_layouts&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;tag_index.html&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token string">&apos;tag&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> tag
+      tag_title_prefix <span class="token operator">=</span> site<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&apos;tag_title_prefix&apos;</span><span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token string">&apos;Tagged: &apos;</span>
+      tag_title_suffix <span class="token operator">=</span> site<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&apos;tag_title_suffix&apos;</span><span class="token punctuation">]</span> <span class="token operator">||</span> &apos;<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#8211;&apos;</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token string">&apos;title&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;<span class="token interpolation"><span class="token delimiter tag">#{</span>tag_title_prefix<span class="token delimiter tag">}</span></span><span class="token interpolation"><span class="token delimiter tag">#{</span>tag<span class="token delimiter tag">}</span></span>&quot;</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token string">&apos;description&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;An archive of posts tagged <span class="token interpolation"><span class="token delimiter tag">#{</span>tag<span class="token delimiter tag">}</span></span>.&quot;</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre>
+<h3>Standard Code Block</h3>
+<pre><code>&lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&gt;
+    {% if page.previous %}
+        &lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&gt;Previous article&lt;/a&gt;
+    {% endif %}
+    {% if page.next %}
+        &lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&gt;Next article&lt;/a&gt;
+    {% endif %}
+&lt;/nav&gt;&lt;!-- /.pagination --&gt;
+</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref1" class="footnote-backref">&#x21A9;</a></p>
+</li>
+</ol>
+</section>
+
+          <footer class="entry-meta">
+            <!-- TODO: Tags -->
+            <span class="author vcard"><span class="fn">Your name</span></span>
+            <!-- TODO: Social Share -->
+          </footer>
+        </div>
+        <div class="read-more">
+          <div class="read-more-header">
+            <a href="http://peden.software" class="read-more-btn">About the Author</a>
+          </div>
+          <div class="read-more-content author-info">
+            <h3>Your name</h3>
+            <div class="author-container">
+              <img src="http://www.gravatar.com/avatar/b490a5811190aa9895f60265a3f7b0eb?s=150" alt="Your name" class="author-img">
+              <div class="author-bio">Your bio goes here. It shouldn&#x27;t be super long, but a good couple of sentences should suffice.</div>
+            </div>
+            <div class="author-share">
+              <ul class="list-inline social-buttons">
+                <li>
+                  <a href="https://github.com/tjpeden" title="GitHub" target="_blank">
+                    <i class="fa fa-github-alt fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://codepen.io/tjpeden/" title="CodePen" target="_blank">
+                    <i class="fa fa-codepen fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/tj.peden" title="Facebook" target="_blank">
+                    <i class="fa fa-facebook-official fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/tjpeden" title="Twitter" target="_blank">
+                    <i class="fa fa-twitter fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/tjpeden" title="LinkedIn" target="_blank">
+                    <i class="fa fa-linkedin fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/TheTJPeden" title="YouTube" target="_blank">
+                    <i class="fa fa-youtube-play fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/tjpeden" title="Twitch" target="_blank">
+                    <i class="fa fa-twitch fa-fw"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="read-more">
+          <div class="read-more-header">
+            <a href="http://localhost:8080/2016/11/29/post-with-a-background-image" class="read-more-btn">Read More</a>
+          </div>
+          <div class="read-more-content">
+            <h3>
+              <a href="/2016/12/02/sample-post" title="Sample Post">Sample Post</a>
+            </h3>
+            <p>
+              Just about everything you&#x27;ll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.
+              <a href="/2016/12/02/sample-post">Continue reading</a>
+            </p>
+          </div>
+          <div class="read-more-list">
+            <div class="list-item">
+              <h4>
+                <a href="/2016/11/29/post-with-a-background-image" title="Post with a Background Image">Post with a Background Image</a>
+              </h4>
+              <span>Published on November 29, 2016</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    
+
+    <div class="footer-wrapper">
+      <footer class="contentinfo">
+        <span>&copy; 2017 Your name. Powered by <a href="http://www.metalsmith.io/" rel="nofollow">Matalsmith</a> using the <a href="https://github.com/tjpeden/neo-hpstr-metalsmith-theme" rel="nofollow">Neo-HPSTR Metalsmith Theme</a>.</span>
+      </footer>
+    </div>
+  </body>
+</html>
