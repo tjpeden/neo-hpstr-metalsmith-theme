@@ -31,11 +31,10 @@
           </footer>
         </div>
         {{> author}}
-        {{#if comments}}
-        {{#if site.discus}}
+        {{#if (and site.disqus comments)}}
         <section id="disqus_thread"></section>
         {{/if}}
-        {{/if}}
+        {{> read-more}}
       </article>
     </div>
 

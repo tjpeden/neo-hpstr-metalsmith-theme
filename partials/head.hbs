@@ -45,4 +45,14 @@
 
 {{> icons}}
 
-<!-- TODO: Background -->
+{{#if (or background-image site.background-image)}}
+<style>
+  body {
+    {{#if background-image}}
+    background-image: url({{#unless (test background-image 'https?://')}}{{ site.url }}/images/{{/unless}}{{ background-image }});
+    {{else}}
+    background-image: url({{#unless (test site.background-image 'https?://')}}{{ site.url }}/images/{{/unless}}{{ site.background-image }});
+    {{/if}}
+  }
+</style>
+{{/if}}

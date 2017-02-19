@@ -13,7 +13,7 @@
     </li>
     {{#each site.menu}}
     {{#if submenu}}
-    <li class="header-item {{log url @root.path}}">
+    <li class="header-item{{#if (or (and (equals url '/') (equals ../path 'index.html')) (equals url ../path))}} active{{/if}}">
       <a href="{{ ../site.url }}/{{ url }}">
         <h3>{{ title }}</h3>
       </a>
@@ -23,8 +23,7 @@
         {{/each}}
       </ul>
     </li>
-    {{else}}
-    {{#if (test url 'https?://')}}
+    {{else if (test url 'https?://')}}
     <li class="header-item">
       <a href="{{ url }}" target="_blank">
         <h3>{{ title }}</h3>
@@ -32,11 +31,10 @@
     </li>
     {{else}}
     <li class="header-item{{#if (or (and (equals url '/') (equals ../path 'index.html')) (equals url ../path))}} active{{/if}}">
-      <a href="{{ ../site.url }}{{ path }}">
+      <a href="{{ ../site.url }}{{ url }}">
         <h3>{{ title }}</h3>
       </a>
     </li>
-    {{/if}}
     {{/if}}
     {{/each}}
     <li class="header-item">

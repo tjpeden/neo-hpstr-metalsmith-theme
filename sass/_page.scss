@@ -180,6 +180,8 @@ header .entry-meta {
   box-shadow: 0 0 0 1px rgba($border-color, 0.1),
               0 6px 12px rgba($black, 0.1);
 
+  @include clearfix;
+
   @media #{$medium} {
     margin: 50px 10px 20px 10px;
     padding: 50px 40px 25px;
@@ -215,6 +217,33 @@ header .entry-meta {
     a {
       color: $text-color;
     }
+  }
+}
+.read-more-list {
+  border-top: solid 2px lighten($base-color, 80);
+}
+.list-item {
+  width: 100%;
+  text-align: left;
+
+  @media #{$medium} {
+    width: 49%;
+    float: left;
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  h4 {
+    @include font-rem(18);
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+    @include font-rem(14);
+    color: lighten($base-color, 50);
   }
 }
 

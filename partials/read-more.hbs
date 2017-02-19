@@ -1,3 +1,32 @@
 <div class="read-more">
-  {{#each }}
+  <div class="read-more-header">
+    <a href="{{ site.url }}/{{ next.path }}" class="read-more-btn">Read More</a>
+  </div>
+  {{#if relations.length}}
+  {{#for relations limit=1}}
+  <div class="read-more-content">
+    <h3>
+      <a href="{{ site.url }}/{{ path }}" title="{{ title }}">{{ title }}</a>
+    </h3>
+    <p>
+      {{#if description}}
+      {{ description }}
+      {{else}}
+      {{ excerpt }}
+      {{/if}}
+      <a href="{{ site.url }}/{{ path }}">Continue reading</a>
+    </p>
+  </div>
+  {{/for}}
+  <div class="read-more-list">
+    {{#for relations limit=2 offset=1}}
+    <div class="list-item">
+      <h4>
+        <a href="{{ site.url }}/{{ path }}" title="{{ title }}">{{ title }}</a>
+      </h4>
+      <span>Published on {{ format date 'MMMM D, YYYY' }}</span>
+    </div>
+    {{/for}}
+  </div>
+  {{/if}}
 </div>

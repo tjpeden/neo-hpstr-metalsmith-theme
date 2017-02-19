@@ -6,6 +6,7 @@ date: 2016-12-02
 tags: [sample post]
 collection: posts
 comments: true
+lunr: true
 feature:
     image: feature.jpg
     credit:
@@ -121,4 +122,4 @@ The image must be in the `/images` folder.
 @tjpeden
 
 ## Emoji
-You should see a smile here. :smile:
+You should see a smile emoji here: :smile:

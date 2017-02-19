@@ -8,7 +8,7 @@ permalink: false
 comments: false
 ---
 
-{{#each (limit collections.posts pagination.end pagination.start)}}
+{{#for collections.posts limit=pagination.end offset=pagination.start}}
 <article class="entry">
   <header>
     {{#if feature}}
@@ -26,7 +26,7 @@ comments: false
     <div class="entry-meta">
       <span class="entry-date date published updated">
         <time datetime="{{ date-to-xmlschema date }}">
-          <a href="{{ ../site.url }}/{{ path }}">{{ format date 'MMMM D, YYYY'}}</a>
+          <a href="{{ ../site.url }}/{{ path }}">{{ format date 'MMMM D, YYYY' }}</a>
         </time>
       </span>
       <span class="author vcard">
@@ -63,4 +63,4 @@ comments: false
     </div>
   </div>
 </article>
-{{/each}}
+{{/for}}

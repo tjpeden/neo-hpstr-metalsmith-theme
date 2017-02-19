@@ -1,12 +1,13 @@
 ---
 layout: home.html
 title: All Posts
+description: "An archive of posts."
 permalink: false
 comments: false
 ---
 {{#each posts}}
 {{#if @first}}
-<section>
+<article>
   <h2 id="{{ format date 'YYYY' }}-ref">{{ format date 'YYYY' }}</h2>
   <ul>
 {{/if}}
@@ -15,11 +16,11 @@ comments: false
     </li>
 {{#if @last}}
   </ul>
-</section>
-{{else if-next-year date next.date}}
+</article>
+{{else if (next-year date next.date)}}
   </ul>
-</section>
-<section>
+</article>
+<article>
   <h2 class="year-heading" id="{{ format next.date 'YYYY' }}-ref">{{ format next.date 'YYYY' }}</h2>
   <ul>
 {{/if}}
