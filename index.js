@@ -82,6 +82,8 @@ function relations(options) {
   };
 }
 
+console.log('ENV:', process.env.NODE_ENV || 'development');
+
 Metalsmith(__dirname)
 .metadata({
   site: {
@@ -102,11 +104,18 @@ Metalsmith(__dirname)
 
     // Site Menu
     menu: [{
-      title: 'Install',
-      url: 'https://github.com/tjpeden/neo-hpstr-metalsmith-theme#installation',
+      title: 'GitHub',
+      url: '#',
+      submenu: [{
+        title: 'Install',
+        url: "https://github.com/tjpeden/neo-hpstr-metalsmith-theme#installation",
+      }, {
+        title: 'Fork',
+        url: "https://github.com/tjpeden/neo-hpstr-metalsmith-theme",
+      }]
     }, {
-      title: 'Fork',
-      url: 'https://github.com/tjpeden/neo-hpstr-metalsmith-theme',
+      title: 'About',
+      url: '/about',
     }, {
       title: 'Archive',
       url: '/posts',
@@ -166,14 +175,14 @@ Metalsmith(__dirname)
     },
   },
 })
+.use(inspect({
+  disable: true,
+  includeMetalsmith: true,
+  exclude: ['contents',  'excerpt', 'stats', 'next', 'previous'],
+}))
 .source('./content')
 .destination('./public')
 .clean(true)
-.use(inspect({
-  disable: true,
-  // includeMetalsmith: true,
-  exclude: [/*'contents',*/  'excerpt', 'stats', 'next', 'previous'],
-}))
 .use(drafts())
 .use(collections({
   posts: {

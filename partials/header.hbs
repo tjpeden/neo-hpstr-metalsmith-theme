@@ -19,7 +19,11 @@
       </a>
       <ul class="header-submenu">
         {{#each submenu}}
+        {{#if (test url 'https?://')}}
+        <li class="sub-item"><a href="{{ url }}">{{ title }}</a></li>
+        {{else}}
         <li class="sub-item"><a href="{{../site.url }}/{{ url }}">{{ title }}</a></li>
+        {{/if}}
         {{/each}}
       </ul>
     </li>
