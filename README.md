@@ -1,4 +1,4 @@
-# Neo-HPSTR Metalsmith Theme
+# [Neo-HPSTR Metalsmith Theme][6]
 
 [![GitHub Version][3]][4]
 
