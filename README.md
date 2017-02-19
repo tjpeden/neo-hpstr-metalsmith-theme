@@ -36,8 +36,8 @@ NOTE: If you're going to serve this using GitHub Pages, be sure to enable GitHub
 * Sweet topbar animated menu with support for drop-downs.
 * Optional [Disqus][8] command and social sharing links.
 * [Open Graph][9] and [Twitter Cards][10] support for a better social sharing experience.
-* Simple custom [404 page](x) to get you started.
-* [Syntax highlighting](x) to make your code examples look snazzy.
+* Simple custom [404 page](content/404.html.hbs) to get you started.
+* [Syntax highlighting](#) to make your code examples look snazzy.
 * Author panel with social links.
 
 ## Configuration
